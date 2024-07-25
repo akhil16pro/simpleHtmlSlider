@@ -5,7 +5,7 @@ body {
 }
 
 main {
-  height: 100vh;
+  height: 100svh;
   width: 100%;
   overflow: hidden;
 
@@ -20,10 +20,13 @@ main {
   display: grid;
   grid-template-columns: repeat(2, 40px);
   gap: 0.2rem;
+  @media only screen and (max-width: 1024px) {
+    bottom: calc(1rem + 6vw - 20px);
+  }
   @media only screen and (max-width: 767px) {
     left: 0.5rem;
-    grid-template-columns: repeat(2, 35px);
-    bottom: 1rem;
+    grid-template-columns: repeat(2, 32px);
+    bottom: calc(1rem + 9vw - 16px);
   }
   .nav {
     aspect-ratio: 2/2;
